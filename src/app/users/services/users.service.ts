@@ -15,8 +15,7 @@ export class UsersService {
   list() {
     return this.http.get<User[]>(this.API)
     .pipe(
-      first(),
-      delay(5000)
+      first()
     )
   }
 }
