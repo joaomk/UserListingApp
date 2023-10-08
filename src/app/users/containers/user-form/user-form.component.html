@@ -4,7 +4,7 @@
   </mat-card-header>
   <mat-card-content>
     <form action="" [formGroup]="form" class="min-width">
-      <mat-form-field style="width: 100%">
+      <mat-form-field class="full-width">
         <mat-label>Usuário (E-mail)</mat-label>
         <input matInput formControlName="email" />
         <mat-error *ngIf="form.get('email')?.invalid">
@@ -12,45 +12,46 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field style="width: 100%">
+      <mat-form-field class="full-width">
         <mat-label>Nome completo</mat-label>
         <input matInput formControlName="name" />
         <mat-error *ngIf="form.get('name')?.invalid">
           {{ getErrorMessage("name") }}
         </mat-error>
       </mat-form-field>
+      <div class="field-wrapper">
+        <mat-form-field>
+          <mat-label>CPF</mat-label>
+          <input matInput formControlName="cpf" placeholder="123.456.789-12" />
+          <mat-error *ngIf="form.get('cpf')?.invalid">
+            {{ getErrorMessage("cpf") }}
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field style="width: 33%">
-        <mat-label>CPF</mat-label>
-        <input matInput formControlName="cpf" placeholder="123.456.789-12" />
-        <mat-error *ngIf="form.get('cpf')?.invalid">
-          {{ getErrorMessage("cpf") }}
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field>
+          <mat-label>Número do telefone</mat-label>
+          <input
+            matInput
+            type="tel"
+            placeholder="(99) 9 9999-9999"
+            formControlName="phoneNumber"
+          />
+          <mat-error *ngIf="form.get('phoneNumber')?.invalid">
+            {{ getErrorMessage("phoneNumber") }}
+          </mat-error>
+        </mat-form-field>
 
-      <mat-form-field style="width: 33%">
-        <mat-label>Número do telefone</mat-label>
-        <input
-          matInput
-          type="tel"
-          placeholder="(99) 9 9999-9999"
-          formControlName="phoneNumber"
-        />
-        <mat-error *ngIf="form.get('phoneNumber')?.invalid">
-          {{ getErrorMessage("phoneNumber") }}
-        </mat-error>
-      </mat-form-field>
-
-      <mat-form-field style="width: 30%">
-        <mat-label>Telefone/Celular</mat-label>
-        <mat-select formControlName="phoneType">
-          <mat-option value="cell-phone">Celular</mat-option>
-          <mat-option value="landline">Telefone fixo</mat-option>
-        </mat-select>
-        <mat-error *ngIf="form.get('phoneType')?.invalid">
-          {{ getErrorMessage("phoneType") }}
-        </mat-error>
-      </mat-form-field>
+        <mat-form-field>
+          <mat-label>Telefone/Celular</mat-label>
+          <mat-select formControlName="phoneType">
+            <mat-option value="cell-phone">Celular</mat-option>
+            <mat-option value="landline">Telefone fixo</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.get('phoneType')?.invalid">
+            {{ getErrorMessage("phoneType") }}
+          </mat-error>
+        </mat-form-field>
+      </div>
     </form>
     <p style="color: blue">
       <em

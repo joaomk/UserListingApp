@@ -1,14 +1,14 @@
 @import '@angular/material/theming';
 
-$custom-app-primary: mat-palette($mat-blue, 700);
-$custom-app-secondary: mat-palette($mat-indigo, A200, A400, 700);
-$custom-app-warn: mat-palette($mat-red);
+$light-app-primary: mat-palette($mat-blue, 700);
+$light-app-accent: mat-palette($mat-indigo, A200, A400, 700);
+$light-app-warn: mat-palette($mat-red);
 
-$custom-theme: mat-light-theme($custom-app-primary,
-    $custom-app-secondary,
-    $custom-app-warn);
+$light-theme: mat-light-theme($light-app-primary,
+    $light-app-accent,
+    $light-app-warn);
 
-@include angular-material-theme($custom-theme);
+@include angular-material-theme($light-theme);
 
 /* Estilos globais */
 html,
@@ -16,7 +16,8 @@ body {
   height: 100%;
 }
 
-body {
+* {
   margin: 0;
+  padding: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }

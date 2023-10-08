@@ -18,8 +18,9 @@ mat-card-actions {
   min-width: 300px;
 }
 
-mat-form-field {
-  margin-right: 12px;
+.field-wrapper {
+  display: flex;
+  gap: 4px;
 }
 
 .btn-space {
