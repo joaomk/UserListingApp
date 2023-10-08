@@ -43,13 +43,13 @@ export class UsersComponent implements OnInit {
 
   onAdd() {
     this.dialog.open(UserFormComponent, {
-      maxWidth: '60vw',
+      minWidth: '70vw',
     });
   }
 
   onRemove(user: User) {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
-      data: 'Tem certeza que deseja remover este curso?',
+      data: 'Tem certeza que deseja remover este usuário?',
     });
 
     dialogRef.afterClosed().subscribe((result: boolean) => {

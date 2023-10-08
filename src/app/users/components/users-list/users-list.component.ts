@@ -30,7 +30,7 @@ export class UsersListComponent {
 
   onEdit(user: User){
     this.dialog.open(UserFormComponent, {
-      maxWidth: '60vw',
+      minWidth: '70vw',
       data: user
     });
   }

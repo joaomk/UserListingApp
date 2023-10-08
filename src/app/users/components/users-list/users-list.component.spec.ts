@@ -38,7 +38,6 @@ describe('UsersListComponent', () => {
     };
     component.onEdit(user);
     expect(mockDialog.open).toHaveBeenCalledWith(jasmine.any(Function), {
-      maxWidth: '60vw',
       data: user,
     });
   });

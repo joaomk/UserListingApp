@@ -24,5 +24,9 @@ mat-card-actions {
 }
 
 .btn-space {
-  margin: 10px;
+  display: flex;
+  gap: 10px;
+}
+mat-form-field{
+  width: 100%;
 }
