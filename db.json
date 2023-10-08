@@ -3,22 +3,42 @@
     {
       "id": "1",
       "name": "João Vitor da Silva",
-      "email": "joao.silva@teste.com"
+      "email": "joao.silva@teste.com",
+      "cpf": "54855464546",
+      "phoneNumber": "48 996196061",
+      "phoneType": "cell-phone"
     },
     {
       "id": "2",
       "name": "Helenice Barros Uchôa",
-      "email": "helenice.uchoa@teste.com"
+      "email": "helenice.uchoa@teste.com",
+      "cpf": "54855464546",
+      "phoneNumber": "48 996196061",
+      "phoneType": "cell-phone"
     },
     {
       "id": "3",
       "name": "Laudemar Celestino Cocelo",
-      "email": "laudemar.cocelo@teste.com"
+      "email": "laudemar.cocelo@teste.com",
+      "cpf": "54855464546",
+      "phoneNumber": "48 996196061",
+      "phoneType": "cell-phone"
     },
     {
       "id": "4",
       "name": "Maurício Gadelha Valladares",
-      "email": "mauricio.valladares@teste.com"
+      "email": "mauricio.valladares@teste.com",
+      "cpf": "54855464546",
+      "phoneNumber": "48 996196061",
+      "phoneType": "cell-phone"
+    },
+    {
+      "id": "JKJW9Z1",
+      "name": "",
+      "email": "",
+      "cpf": "",
+      "phoneNumber": "",
+      "phoneType": ""
     }
   ]
 }

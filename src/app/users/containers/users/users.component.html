@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-toolbar color="primary">Registered users</mat-toolbar>
+
+  <div class="mat-elevation-z8">
+    <app-users-list
+      *ngIf="users$ | async as users; else loading"
+      [users]="users"
+      (remove)="onRemove($event)"
+    ></app-users-list>
+
+    <ng-template #loading>
+      <div class="loading-spinner">
+        <mat-spinner></mat-spinner>
+      </div>
+    </ng-template>
+  </div>
+</mat-card>
+
+<button
+  mat-mini-fab
+  color="accent"
+  aria-label="Edd user"
+  class="addButton"
+  (click)="onAdd()"
+>
+  <mat-icon>add</mat-icon>
+</button>
