@@ -1,6 +1,6 @@
 <div>
   <mat-card-header>
-    <h2>Add new users</h2>
+    <h2>Adicionar/Editar usuário</h2>
   </mat-card-header>
   <mat-card-content>
     <form action="" [formGroup]="form" class="min-width">
@@ -60,7 +60,16 @@
   </mat-card-content>
 
   <mat-card-actions>
-    <button color="primary" mat-raised-button (click)="onSubmit()">SAVE</button>
-    <button mat-raised-button (click)="onCancel()">CANCEL</button>
+    <button
+      color="primary"
+      mat-raised-button
+      (click)="onSubmit()"
+      class="btn-space"
+    >
+      Salvar
+    </button>
+    <button mat-raised-button (click)="onCancel()" class="btn-space">
+      Cancelar
+    </button>
   </mat-card-actions>
 </div>

@@ -59,7 +59,12 @@ export class UserFormComponent implements OnInit{
   }
 
   onSubmit(){
-   this.service.save(this.form.value).subscribe(data => this.onSuccess(), error => this.onError())
+    if (this.form.valid) {
+      this.service.save(this.form.value)
+        .subscribe(data => this.onSuccess(), error => this.onError())
+    } else {
+      alert('form invalido')
+    }
   }
 
   private onError() {
