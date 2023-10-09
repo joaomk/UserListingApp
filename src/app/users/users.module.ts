@@ -8,6 +8,9 @@ import { SharedModule } from '../shared/shared.module';
 import { UserFormComponent } from './containers/user-form/user-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UsersListComponent } from './components/users-list/users-list.component';
+import { MatTableModule } from '@angular/material/table';
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [UsersComponent, UserFormComponent, UsersListComponent],
@@ -16,7 +19,10 @@ import { UsersListComponent } from './components/users-list/users-list.component
     UsersRoutingModule,
     AppMaterialModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatTableModule,
+    HttpClientModule,
+    MatDialogModule,
 ],
 })
 export class UsersModule {}

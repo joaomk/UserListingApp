@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { UsersListComponent } from './users-list.component';
 import { MatDialog } from '@angular/material/dialog';
+import { UserFormComponent } from '../../containers/user-form/user-form.component';
+import { MatTableModule } from '@angular/material/table';
 
 describe('UsersListComponent', () => {
   let component: UsersListComponent;
@@ -8,13 +10,12 @@ describe('UsersListComponent', () => {
   let mockDialog: jasmine.SpyObj<MatDialog>;
 
   beforeEach(() => {
-    // Criar um objeto spyOn para MatDialog
     mockDialog = jasmine.createSpyObj<MatDialog>('MatDialog', ['open']);
 
     TestBed.configureTestingModule({
       declarations: [UsersListComponent],
+      imports: [MatTableModule],
       providers: [
-        // Fornecer o objeto spyOn no lugar do MatDialog real
         { provide: MatDialog, useValue: mockDialog },
       ],
     });
@@ -37,7 +38,8 @@ describe('UsersListComponent', () => {
       phoneType: "cell-phone"
     };
     component.onEdit(user);
-    expect(mockDialog.open).toHaveBeenCalledWith(jasmine.any(Function), {
+    expect(mockDialog.open).toHaveBeenCalledWith(UserFormComponent, {
+      minWidth: '70vw',
       data: user,
     });
   });

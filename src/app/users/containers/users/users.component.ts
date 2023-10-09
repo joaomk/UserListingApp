@@ -14,7 +14,7 @@ import { ConfirmationDialogComponent } from '../../components/confirmation-dialo
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
-  users$: Observable<User[]> | null = null;
+  users$: Observable<User[]> = of([]);
 
   constructor(
     private service: UsersService,
@@ -26,7 +26,7 @@ export class UsersComponent implements OnInit {
 
   refresh() {
     this.users$ = this.service.list().pipe(
-      catchError((error) => {
+      catchError(() => {
         this.onError('Erro ao carregar usuários!');
         return of([]);
       })
@@ -68,10 +68,4 @@ export class UsersComponent implements OnInit {
       }
     });
   }
-
-  // onEdit(user: User) {
-  //   this.dialog.open(UserFormComponent,  {
-  //     maxWidth: '60vw',
-  //   });
-  // }
 }

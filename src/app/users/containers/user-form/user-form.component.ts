@@ -1,8 +1,6 @@
 import { User } from './../../model/user';
 import { Component, OnInit, Inject } from '@angular/core';
 import {
-  FormControl,
-  FormGroup,
   NonNullableFormBuilder,
   UntypedFormControl,
   UntypedFormGroup,
@@ -10,11 +8,8 @@ import {
 } from '@angular/forms';
 import { UsersService } from '../../services/users.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Location } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { isCPF, isPhone } from 'brazilian-values';
 
 @Component({
   selector: 'app-user-form',
@@ -119,8 +114,8 @@ export class UserFormComponent implements OnInit {
       horizontalPosition: 'end',
       verticalPosition: 'top',
     });
-    location.reload()
-    this.dialog.closeAll();
+      this.dialog.closeAll();
+      location.reload();
   }
 
   getErrorMessage(fieldName: string) {
